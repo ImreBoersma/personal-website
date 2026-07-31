@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Imre Boersma logo">
+  <!-- Brand-blue squircle tile -->
+  <rect width="512" height="512" rx="116" fill="#2b50d6"/>
+  <!-- Dashed ring — echoes the ring around the hero portrait -->
+  <circle cx="256" cy="256" r="198" fill="none" stroke="#ffffff" stroke-opacity="0.22"
+          stroke-width="4" stroke-dasharray="4 14" stroke-linecap="round"/>
+  <!-- Confetti accents from the landing palette -->
+  <circle cx="122" cy="130" r="17" fill="#f5c518"/>
+  <circle cx="402" cy="392" r="30" fill="#ea5c4d"/>
+  <!-- "IB" monogram as vector paths (font-independent) -->
+  <g transform="translate(-10 0)" fill="none" stroke="#ffffff" stroke-width="46"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M182 173V339"/>
+    <path d="M278 173V339"/>
+    <path d="M278 173C374 173 374 256 278 256"/>
+    <path d="M278 256C374 256 374 339 278 339"/>
+  </g>
+</svg>
