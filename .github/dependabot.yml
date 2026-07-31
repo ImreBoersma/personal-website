@@ -1,5 +1,5 @@
 # Dependabot version updates — https://docs.github.com/code-security/dependabot
-# Security updates are enabled separately in the repo's Security settings.
+# Security updates are enabled separately under Settings → Code security.
 version: 2
 updates:
   # npm dependencies
@@ -10,15 +10,19 @@ updates:
     open-pull-requests-limit: 10
     labels:
       - "dependencies"
+    commit-message:
+      prefix: "chore(deps)"
+      prefix-development: "chore(dev-deps)"
     groups:
-      # Bundle routine minor/patch bumps into a single PR to cut noise.
-      npm-minor-and-patch:
+      # One PR per week for every minor/patch bump (prod + dev). These are
+      # auto-merged by the CI workflow once the build passes, so they need no
+      # review. Majors are intentionally excluded and get their own PR.
+      npm-non-major:
         update-types:
           - "minor"
           - "patch"
-    # Majors stay as individual PRs so they get a proper review.
 
-  # GitHub Actions used in workflows
+  # GitHub Actions used in the workflows below
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -26,3 +30,10 @@ updates:
     labels:
       - "dependencies"
       - "github-actions"
+    commit-message:
+      prefix: "chore(ci)"
+    groups:
+      actions-non-major:
+        update-types:
+          - "minor"
+          - "patch"
