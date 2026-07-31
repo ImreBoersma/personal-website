@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import type { Metadata } from "next";
 import { Archivo, Lato } from "next/font/google";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
 			className={`${archivo.variable} ${lato.variable} h-full antialiased`}
 		>
 			<Analytics />
+			<SpeedInsights />
 			<body className="min-h-full bg-zinc-50 text-zinc-900">{children}</body>
 		</html>
 	);
