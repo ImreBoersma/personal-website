@@ -54,7 +54,7 @@ jobs:
     steps:
       - name: Fetch Dependabot metadata
         id: meta
-        uses: dependabot/fetch-metadata@v2
+        uses: dependabot/fetch-metadata@v3
 
       # Auto-merge everything except majors — they still get a manual review.
       - name: Enable auto-merge for non-major updates
