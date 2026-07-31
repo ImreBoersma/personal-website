@@ -1,5 +1,7 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Archivo, Lato } from "next/font/google";
+
 import "./globals.css";
 
 // Display font — used for headings/hero, so it stays preloaded. Loaded as a
@@ -42,6 +44,7 @@ export default function RootLayout({
 			lang="nl"
 			className={`${archivo.variable} ${lato.variable} h-full antialiased`}
 		>
+			<Analytics />
 			<body className="min-h-full bg-zinc-50 text-zinc-900">{children}</body>
 		</html>
 	);
