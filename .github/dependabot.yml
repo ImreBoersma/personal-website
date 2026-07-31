@@ -1,0 +1,28 @@
+# Dependabot version updates — https://docs.github.com/code-security/dependabot
+# Security updates are enabled separately in the repo's Security settings.
+version: 2
+updates:
+  # npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+    groups:
+      # Bundle routine minor/patch bumps into a single PR to cut noise.
+      npm-minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    # Majors stay as individual PRs so they get a proper review.
+
+  # GitHub Actions used in workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencies"
+      - "github-actions"

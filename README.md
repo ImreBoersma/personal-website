@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# imreboersma.nl
 
-## Getting Started
+Personal portfolio of Imre Boersma — software developer at Watch-E, Arnhem. A
+content-driven, statically rendered site.
 
-First, run the development server:
+## Tech stack
+
+- [Next.js 16](https://nextjs.org) (App Router, Turbopack) + [React 19](https://react.dev)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- TypeScript
+- [Biome](https://biomejs.dev) for linting & formatting
+- Content authored in Markdown, parsed with `gray-matter` + `react-markdown`
+- Deployed on [Vercel](https://vercel.com)
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Script          | Description                          |
+| --------------- | ------------------------------------ |
+| `npm run dev`   | Start the dev server                 |
+| `npm run build` | Production build                     |
+| `npm run start` | Serve the production build           |
+| `npm run lint`  | Lint & format with Biome (`--write`) |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requires Node.js 20+.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+All copy lives in Markdown under [`content/`](content/) — no code changes
+needed to update the site. Each file's YAML frontmatter holds structured fields;
+the Markdown body is the free-form text.
 
-To learn more about Next.js, take a look at the following resources:
+```
+content/
+├── profile.md            # name, hero copy, about, section headings
+├── skills.md             # skill groups
+├── education.md          # education entries
+├── volunteer.md          # volunteer roles
+├── experience/*.md       # one file per job (numeric prefix = order)
+└── projects/*.md         # one file per project (numeric prefix = order)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For example, a project file — omit `link`/`repo` to hide those buttons:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```markdown
+---
+title: "Vrijwilligersportal voor de Zwarte Cross"
+role: "Softwareontwikkelaar"
+stack: [React, C#, ASP.NET]
+link: "https://example.com" # optional
+repo: "https://github.com/..." # optional
+---
 
-## Deploy on Vercel
+Description of the project in plain Markdown.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Loaders in [`lib/content.ts`](lib/content.ts) read these files at build time and
+type the frontmatter.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Project structure
+
+```
+app/         # Next.js App Router (layout, page, global styles)
+components/   # UI, grouped atoms / molecules / organisms
+lib/          # content loaders
+content/      # Markdown content (see above)
+public/       # static assets (headshot, favicon set)
+```
