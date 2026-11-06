@@ -14,30 +14,31 @@ landing:
   landingCopy:
     greet: "Hoi, ik ben"
     role: "Softwareontwikkelaar"
-    sub: "Fullstack developer uit Brummen. Ik bouw webapplicaties met React, C# en .NET — van vrijwilligersportals tot slimme planningstools."
+    sub: "Ik maak apps en webapplicaties met React, C# en .NET."
     avail: "Softwareontwikkelaar bij Watch-E"
     badge: "Fullstack"
 about:
   eyebrow: "Over mij"
-  heading: "Ik ben op mijn best als ik producten bouw die eenvoudig aanvoelen en vanbinnen stevig zijn."
-  cardTitle: "Een praktische, mensgerichte ontwikkelaar"
+  heading: "Ook buiten werktijd ben ik veel aan het bouwen."
+  cardTitle: "Maken, muziek en spellen"
 sections:
   projects:
-    eyebrow: "Geselecteerd werk"
-    title: "Een paar projecten die laten zien hoe ik denk."
-    description: "Deze projecten draaien om productkeuzes, interfaceontwerp en pragmatische technische afwegingen."
+    eyebrow: "Projecten"
+    title: "Websites die ik heb gemaakt."
+    description: "In mijn vrije tijd bouw en onderhoud ik websites, vooral voor verenigingen in Brummen."
   experience:
     eyebrow: "Ervaring & opleiding"
-    title: "Een praktische mix van productwerk, stages en hands-on ontwikkeling."
+    title: "Waar ik heb gewerkt en wat ik heb geleerd."
   skills:
     eyebrow: "Vaardigheden"
-    title: "Een gedegen toolkit, geen waslijst."
+    title: "Waar ik mee werk."
   contact:
-    title: "Laten we samen iets nuttigs maken."
-    description: "Ik ben softwareontwikkelaar bij Watch-E in Arnhem en woon in Brummen. Ik praat graag over frontend- en productontwikkeling, ontwerpkwaliteit, performance en pragmatisch opleveren."
+    title: "Neem gerust contact op."
+    description: "Heb je een vraag, een idee of een project? Stuur me gerust een berichtje."
 ---
-Ik ben Imre Boersma, softwareontwikkelaar bij Watch-E in Arnhem en woonachtig in Brummen, met een sterke interesse in frontend engineering, webapplicaties en gebruikersgericht productwerk. Ik vind het leuk om complexe workflows om te zetten in tools die rustig en bruikbaar aanvoelen.
 
-Bij Watch-E werk ik dagelijks aan het bouwen en onderhouden van webapplicaties. Daarnaast bestaat mijn ervaring uit vrijwilligersplatforms, interne tools en meerdere stages waarin ik werkte met React, Vue.js, C#, .NET, PHP en SQL. Ik hecht waarde aan heldere interfaces, prettige samenwerking en code die onderhoudbaar blijft naarmate producten groeien.
+Thuis draait een server met Home Assistant en een aantal andere tools die ik zelf beheer. Voor de bedrijven van familie maak ik formulieren en administratieve apps.
 
-Ik heb Nederlands als moedertaal, spreek vloeiend Engels en houd van muziek, computers, wandelen, D&D en bordspellen.
+Ik spreek Nederlands als moedertaal en Engels vloeiend.
+
+Naast het programmeren speel ik hoorn en trompet, componeer ik, wandel ik graag en speel ik Dungeons & Dragons en bordspellen.

@@ -12,19 +12,16 @@ import {
 	getProfile,
 	getProjects,
 	getSkills,
-	getVolunteerWork,
 } from "@/lib/content";
 
 export default async function Home() {
-	const [profile, projects, skills, experience, education, volunteerWork] =
-		await Promise.all([
-			getProfile(),
-			getProjects(),
-			getSkills(),
-			getExperience(),
-			getEducation(),
-			getVolunteerWork(),
-		]);
+	const [profile, projects, skills, experience, education] = await Promise.all([
+		getProfile(),
+		getProjects(),
+		getSkills(),
+		getExperience(),
+		getEducation(),
+	]);
 
 	return (
 		<>
@@ -137,22 +134,6 @@ export default async function Home() {
 											</p>
 										</article>
 									))}
-								</div>
-								<div className="space-y-3">
-									<div className="flex items-center gap-2">
-										<span className="h-2 w-2 rounded-full bg-sun" />
-										<h3 className="font-display text-sm font-extrabold uppercase tracking-[0.16em] text-ink-faint">
-											Vrijwilligerswerk
-										</h3>
-									</div>
-									<ul className="space-y-2.5 rounded-2xl border border-line bg-mist p-5 text-sm leading-7 text-ink-soft">
-										{volunteerWork.map((item) => (
-											<li key={item} className="flex gap-2.5">
-												<span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber" />
-												<span>{item}</span>
-											</li>
-										))}
-									</ul>
 								</div>
 							</div>
 						</div>
