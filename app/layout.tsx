@@ -22,7 +22,7 @@ const lato = Lato({
 export const metadata: Metadata = {
 	title: "Imre Boersma | Softwareontwikkelaar",
 	description:
-		"Imre Boersma is softwareontwikkelaar bij Watch-E in Arnhem, gespecialiseerd in het bouwen van webapplicaties met oog voor performance, schaalbaarheid en gebruikerservaring. Met een passie voor heldere code en doordachte oplossingen werkte Imre aan uiteenlopende projecten in verschillende branches.",
+		"Imre Boersma is softwareontwikkelaar bij Watch-E in Arnhem en werkt daar aan de MijnEnergieBundel-app voor iOS en Android. In de vrije tijd bouwt Imre websites en apps voor verenigingen in Brummen.",
 	icons: {
 		icon: [
 			{ url: "/favicon/favicon.ico", sizes: "any" },

@@ -112,11 +112,6 @@ export async function getEducation(): Promise<EducationItem[]> {
 	return (data.items ?? []) as EducationItem[];
 }
 
-export async function getVolunteerWork(): Promise<string[]> {
-	const { data } = await readEntry("volunteer.md");
-	return (data.items ?? []) as string[];
-}
-
 export async function getExperience(): Promise<ExperienceItem[]> {
 	const entries = await readCollection("experience");
 	return entries.map(({ data, body }) => ({
